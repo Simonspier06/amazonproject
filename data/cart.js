@@ -49,4 +49,19 @@ import { products } from "./products.js";
   cart=NewCart;
   SavetoStorage();
  }
+
+export function updateDeliveryOption(productId,deliveryOptionId) {
+
+   let matchingItem;
+     cart.forEach((CartItem)=>{
+       if(productId===CartItem.productId)
+       {
+         matchingItem=CartItem;
+
+       }
+     });
+
+     matchingItem.deliveryOptionId=deliveryOptionId;
+     SavetoStorage();
+ }
  
