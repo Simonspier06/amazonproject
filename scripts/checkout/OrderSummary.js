@@ -41,7 +41,7 @@ js-cart-item-container-${matchingproduct.id}">
         ${matchingproduct.name}
       </div>
       <div class="product-price">
-       $${formatCurrenty(matchingproduct.priceCents)}
+       ${matchingproduct.getPrice()}
       </div>
       <div class="product-quantity">
         <span>
