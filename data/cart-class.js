@@ -1,15 +1,15 @@
 class Cart {
 
   cartItem;
-  localStorageKey;
+  #localStorageKey;  // private it cant use outside now 
 
   constructor(localStorageKey){
-this.localStorageKey=localStorageKey;
- this.loadFromStorage();
+this.#localStorageKey=localStorageKey;
+ this.#loadFromStorage();
   }
 
-  loadFromStorage() {
-this.cartItem=JSON.parse(localStorage.getItem(this.localStorageKey))
+  #loadFromStorage() {
+this.cartItem=JSON.parse(localStorage.getItem(this.#localStorageKey))
   ||
  [{
   productId:'e43638ce-6aa0-4b85-b27f-e1d07eb678c6',
